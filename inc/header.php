@@ -1,5 +1,6 @@
 <?php
     require(realpath( dirname( __FILE__ ) ) . '\..\config.php' );
+    require(realpath( dirname( __FILE__ ) ) ."\..\dbconnect.php");
 ?>
 
 

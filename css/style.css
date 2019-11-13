@@ -26,3 +26,22 @@ footer {
 #products {
   margin: 50px 0 170px;
 }
+
+#admin-area {
+  display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    height: 50vh;
+}
+
+#admin-area form {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+form input {
+  margin: 20px;
+}

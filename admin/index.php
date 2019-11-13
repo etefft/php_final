@@ -7,8 +7,9 @@
     require("../inc/nav.php");
 ?>
 
-<div>
+<div id="admin-area">
     <h3>Welcome to the admin area</h3>
+    <?php require('login.php'); ?>
 </div>
 
 <?php
