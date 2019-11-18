@@ -9,7 +9,7 @@
     require("inc/nav.php");
   ?>
 
-  <header class="bg-primary text-white">
+  <header class="bg-primary text-white"><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <div class="container text-center">
       <h1>Special Sox</h1>
       <p class="lead">A place to buy sox</p>
