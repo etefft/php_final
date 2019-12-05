@@ -5,11 +5,11 @@
 // $username = "etefftceiwd";
 // $password = "bpapassword";
 //Localhost connection
-// $servername = "localhost";
-// $dbusername = "root";
-// $password = "";
+$servername = "localhost";
+$dbusername = "root";
+$password = "";
 //DB name
-// $dbname = "store"; 
-// $conn = new mysqli($servername, $dbusername, $password);
+$dbname = "shop"; 
+$conn = new mysqli($servername, $dbusername, $password, $dbname);
 
 ?>
