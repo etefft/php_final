@@ -20,7 +20,7 @@
 
 
     <form  class="card card-body bg-light" id="item-upload" action="verify.php" method="post"  enctype="multipart/form-data">
-    <label for="item-image">Item image</label>
+    <label for="image">Item image</label>
         <input  class="card card-body bg-light" type="file" name="image" required>
         <label for="item-name">Item Name</label>
         <input type="text" name="item-name" id="" required>

@@ -10,7 +10,7 @@
             <a class="nav-link js-scroll-trigger" href=<?php echo APP_ROOT . "/products.php"?>>Products</a>
           </li>
           <li class="nav-item">
-            <a id="shopping" class="nav-link js-scroll-trigger" href=<?php echo APP_ROOT . "/shopping-cart"?>>Shopping Cart</a>
+            <a id="shopping" class="nav-link js-scroll-trigger" href=<?php echo APP_ROOT . "/shopping-cart.php"?>>Shopping Cart</a>
           </li>
           <?php
             if (isset($_SESSION['email'])) {

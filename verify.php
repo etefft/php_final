@@ -29,15 +29,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         session_destroy();
         header("Location: organize-products.php");
     } elseif (isset($_FILES)) {
-    var_dump($_FILES);
-            $errors = "";
+        $errors = "";
+        if (empty($_FILES)) {
+            $errors = "no-image";
+            header("Location: organize-products.php?errors=$errors");
+        } else {
+            
             $file_name = $_FILES['image']['name'];
             $file_size = $_FILES['image']['size'];
             $file_tmp = $_FILES['image']['tmp_name'];
             $file_type = $_FILES['image']['type'];
             $file_ext_tmp=explode('.', strtolower($_FILES['image']['name']));
             $file_ext = end($file_ext_tmp);
-            var_dump($file_ext);
             $extensions= array("jpeg","jpg","png");
             
             if(in_array($file_ext, $extensions)=== false){
@@ -61,9 +64,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $stmt->execute();
                 header("Location: organize-products.php?success=true"); 
             }else{
-            //    header("Location: organize-products.php?errors=$errors");
+               header("Location: organize-products.php?errors=$errors");
             }
-        
+        }
           
     }
   
@@ -86,7 +89,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 } elseif (isset($_GET["deleteItem"])) {
     $key = array_search( $_GET["deleteItem"], $_SESSION["cart"]);
     unset($_SESSION["cart"][$key]);
-    var_dump($_SESSION['cart']);
     header("Location: shopping-cart.php");
 } elseif (isset($_GET["checkout"])) {
     $_SESSION["cart"] = [];
